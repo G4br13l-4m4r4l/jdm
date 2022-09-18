@@ -1,11 +1,55 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    width:100%;
+    max-width: 750px;
+    margin: auto;
+    display: flex;
+    padding: 50px 0;
 
-export const Info = styled.div``;
+    @media (max-width: 750px){
+        flex-direction: column;
+    }
+`;
 
-export const LogoLink= styled.a``;
+export const Info = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: auto;
 
-export const InfoArea= styled.div``;
+    @media(max-width: 750px){
+        margin-bottom: 50px;
+        align-items: 50px;
+    }
+`;
 
-export const Area= styled.div``;
+export const LogoLink= styled.a`
+    display:block;
+
+    @media(max-width: 750px){
+        margin-left: 170px
+    }
+`;
+
+export const InfoArea= styled.div`
+    width:100%;
+    margin: 10px 0;
+
+    @media(max-width: 750px){
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+`;
+
+export const Area= styled.div`
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    
+    @media(max-width: 750px){
+        justify-content:center;
+        margin: 0 20px;
+    }
+`;
