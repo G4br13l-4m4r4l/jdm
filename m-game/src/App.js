@@ -1,11 +1,42 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import * as Sty from './App.styles';
 import { Button } from './components/button';
 import { InfoItem } from './components/InfoItem';
+import { Items } from './data/items';
 class App extends Component {
   render() {
-    
+
+    const [playing, setplaying] =  useState(false);
+    const [timeE, setTimeE] = useState(0);
+    const [moveC, setmoveC] = useState(0);
+    const [showCount, setshownCount] = useState(0);
+    const [GridItem, setGridItem] = useState([]);
+
+    useEffect(()=> resetAndCreateGrid(),[]);
+
     const resetAndCreateGrid = ()=>{
+      // reset the game
+
+      setTimeE(0);
+      setmoveC(0);
+      setshownCount(0);
+
+      //creating the grid
+      let gridTemp = [];
+      for(let i = 0; i<(Items.length *2); i++){
+        gridTemp.push({
+          item:null,
+          shown: false,
+          permanentShown: false
+        });
+      }
+
+      setGridItem(gridTemp);
+
+
+      //start the game
+    
+      setplaying(true);
 
     }
     
@@ -21,7 +52,9 @@ class App extends Component {
             <Button label="Reiniciar" icon="" onClick={resetAndCreateGrid} />
           </Sty.Info>
           <Sty.Area>
-            Coming soon!
+            <Sty.Grid>
+
+            </Sty.Grid>
           </Sty.Area>
         </Sty.Container>
       </div>

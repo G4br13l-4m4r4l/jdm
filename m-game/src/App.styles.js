@@ -10,7 +10,7 @@ export const Container = styled.div`
     @media (max-width: 750px){
         flex-direction: column;
     }
-`;
+`
 
 export const Info = styled.div`
     display: flex;
@@ -21,7 +21,7 @@ export const Info = styled.div`
         margin-bottom: 50px;
         align-items: 50px;
     }
-`;
+`
 
 export const LogoLink= styled.a`
     display:block;
@@ -29,7 +29,7 @@ export const LogoLink= styled.a`
     @media(max-width: 750px){
         margin-left: 170px
     }
-`;
+`
 
 export const InfoArea= styled.div`
     width:100%;
@@ -41,7 +41,7 @@ export const InfoArea= styled.div`
         text-align: center;
     }
 
-`;
+`
 
 export const Area= styled.div`
     flex:1;
@@ -52,4 +52,11 @@ export const Area= styled.div`
         justify-content:center;
         margin: 0 20px;
     }
-`;
+`
+
+export const Grid = styled.div`
+    width: 430px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+`

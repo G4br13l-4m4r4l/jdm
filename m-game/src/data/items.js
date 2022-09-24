@@ -1,4 +1,4 @@
-export const items = [
+export const Items = [
     {name: 'android', icon: 'android' },
     {name: 'caminhao', icon: 'caminhao'},
     {name: 'disney', icon: 'disney' },
